@@ -1,46 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-labelledby="title desc">
-  <title id="title">Hap</title>
-  <desc id="desc">A laughing voxel explorer in a gold helmet, with a teal visor and a small trail of waypoint markers.</desc>
-  <defs>
-    <linearGradient id="shell" x2="0" y2="1"><stop stop-color="#ffeaaa"/><stop offset="1" stop-color="#f2a354"/></linearGradient>
-    <linearGradient id="visor" x2="0" y2="1"><stop stop-color="#264255"/><stop offset="1" stop-color="#111d30"/></linearGradient>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#6b526f" opacity=".27"/></pattern>
-  </defs>
-  <style>
-    .bot { animation: hover 1.4s ease-in-out 3; }
-    .tear { animation: flick 1.4s ease-in-out 3; }
-    .signal { animation: pulse 1.4s ease-in-out 3; }
-    @keyframes hover { 48% { transform: translateY(-7px); } }
-    @keyframes flick { 55% { transform: translate(4px, 4px); opacity: .6; } }
-    @keyframes pulse { 50% { opacity: .35; } }
-    @media (prefers-reduced-motion: reduce) { .bot,.tear,.signal { animation: none; } }
-  </style>
-  <rect x="1" y="1" width="798" height="298" rx="26" fill="#22182e" stroke="#805b7e"/>
-  <rect x="406" y="18" width="375" height="264" rx="17" fill="url(#grid)" stroke="#563e60"/>
-  <path d="M37 66H376M37 237H376" stroke="#684d69"/>
-  <g font-family="monospace" font-size="12" letter-spacing="2" fill="#e5b5ce">
-    <text x="37" y="48">HAP / FIELD LAB</text>
-    <text x="37" y="260">MINECRAFT JAVA / FABRIC</text>
-    <text x="758" y="263" text-anchor="end">EXPLORER / 01</text>
-  </g>
-  <text x="31" y="166" font-family="system-ui,sans-serif" font-size="102" font-weight="850" letter-spacing="-8" fill="#fff1d8">Hap<tspan fill="#f4ae67">.</tspan></text>
-  <text x="39" y="207" font-family="system-ui,sans-serif" font-size="18" fill="#efc8db">Autonomous Minecraft · Humanlike control</text>
-  <ellipse cx="596" cy="228" rx="87" ry="13" fill="#120d1e" opacity=".72"/>
-  <path d="M467 227h49l29-15h130l37-25h30" fill="none" stroke="#8e6386" stroke-width="2" stroke-dasharray="4 6"/>
-  <path class="signal" d="m742 181 6 6-6 6-6-6zM467 222l5 5-5 5-5-5z" fill="#83f2d8"/>
-  <g class="bot" stroke="#462b42" stroke-width="3" stroke-linejoin="round">
-    <path d="M526 96l31-28h104l-23 28z" fill="#fff0bc"/>
-    <path d="m638 96 23-28 22 18v93l-45 28z" fill="#d18152"/>
-    <path d="M526 96h112v111H526l-12-13v-85z" fill="url(#shell)"/>
-    <path d="M525 123h99l7 7v49l-9 9h-98l-6-8v-49z" fill="url(#visor)"/>
-    <path d="M546 151v-5l8-5 8 5v5m28 0v-5l8-5 8 5v5" fill="none" stroke="#98ffe4" stroke-width="4" stroke-linecap="round"/>
-    <path d="M561 162h31l-4 10-6 5h-12l-6-5z" fill="#fc9cbb" stroke="none"/>
-    <path class="tear" d="M544 152h-5l-6 7v6h8l3-4zM608 152h5l6 7v6h-8l-3-4z" fill="#70e4ff" stroke="none"/>
-    <path d="M651 120l17-11v30l-17 11z" fill="#ffdc8f"/>
-    <path d="m655 128 9-6m-9 12 9-6" stroke="#945041" stroke-width="2"/>
-    <path d="M566 103h22" stroke="#fff0bc" stroke-width="4" stroke-linecap="round"/>
-    <path d="M653 78V52l12-8" fill="none" stroke="#9a7493" stroke-width="4"/>
-    <circle class="signal" cx="667" cy="43" r="5" fill="#92ffe0" stroke="none"/>
-  </g>
-  <path class="signal" d="M487 98v16m-8-8h16m215 21v14m-7-7h14" stroke="#f6a8c4" stroke-width="2" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 270" role="img" aria-labelledby="title desc">
+<title id="title">Hap — A Minecraft agent in development</title>
+<desc id="desc">An ink and paper wordmark alongside Hap, a small angular face drawn from a block silhouette.</desc>
+<rect width="960" height="270" fill="#f3f2ed"/>
+<path d="M32 38H928M32 238H928" stroke="#262c29"/>
+<text x="34" y="28" font-family="monospace" font-size="12" letter-spacing="1" fill="#47534b">HAP / MINECRAFT AGENT</text>
+<text x="926" y="28" text-anchor="end" font-family="monospace" font-size="12" fill="#47534b">IN DEVELOPMENT</text>
+<text x="27" y="181" font-family="Georgia,serif" font-size="151" font-weight="bold" letter-spacing="-8" fill="#202925">hap</text>
+<text x="38" y="215" font-family="sans-serif" font-size="17" fill="#47534b">Independent play. Considered movement.</text>
+<g stroke="#263d32" stroke-width="4" stroke-linejoin="round">
+<path d="m727 75 42-23 105 20-42 25z" fill="#e0e6db"/>
+<path d="m832 97 42-25v108l-42 24z" fill="#8b9c8c"/>
+<path d="m727 75 105 22v107l-105-22z" fill="#f3f2ed"/>
+<path d="m744 119 10-9 10 13m25 6 10-9 10 13" fill="none" stroke-linecap="round"/>
+<path d="m756 146 40 8c-8 25-32 20-40-8z" fill="#263d32"/>
+</g>
+<path d="M658 192h36m-14-6 14 6-14 6" fill="none" stroke="#687c6c" stroke-width="2"/>
+<text x="34" y="257" font-family="monospace" font-size="11" fill="#47534b">FABRIC / JAVA EDITION</text>
+<text x="926" y="257" text-anchor="end" font-family="monospace" font-size="11" fill="#47534b">HAP, AT THE START.</text>
 </svg>

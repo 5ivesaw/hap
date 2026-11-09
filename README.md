@@ -1,35 +1,36 @@
-<h1 align="center">
-  <img src="assets/hap.svg" width="800" alt="Hap. A laughing voxel explorer with a gold helmet and a teal visor.">
-</h1>
+<img src="assets/hap.svg" width="960" alt="Hap. A Minecraft agent in development, with an ink and paper wordmark and a block-shaped smiling mascot.">
 
-<p align="center">
-  <a href="#design"><img src="assets/compass.svg" width="19" height="19" alt=""> Design</a>
-  &emsp;
-  <a href="#first-playtest"><img src="assets/play.svg" width="19" height="19" alt=""> Playtest</a>
-  &emsp;
-  <a href="#development-status"><img src="assets/status.svg" width="19" height="19" alt=""> Status</a>
-</p>
+[The project](#the-project) &nbsp; / &nbsp; [First test](#first-test) &nbsp; / &nbsp; [Progress](#progress)
 
-## Design
+## The project
 
-Hap is a planned Fabric client for Minecraft Java 26.3. Its goal is to combine precise movement with independent task planning in a lightweight client.
+Hap explores how an autonomous Minecraft player should move, aim, build, and make decisions. The ambition is a capable agent whose actions feel deliberate, with a small enough client to run on modest hardware.
 
-<p align="center">
-  <img src="assets/move.svg" width="410" alt="Movement control: camera, timing, and footwork.">
-  <img src="assets/plan.svg" width="410" alt="Task planning: actions, sequences, and goals.">
-</p>
+**Movement** — Camera control, footwork, tool changes, and placement timing.  
+**Planning** — Gathering resources, choosing tasks, and following longer goals.
 
-## First playtest
+## First test
 
-<p align="center">
-  <img src="assets/milestone.svg" width="880" alt="First Waypoint. Replay pending. Take control, reach the marker, then return control.">
-</p>
+**01 / Reach a waypoint**
 
-## Development status
+A controlled world, one marked destination, and a recorded run. The first test will measure arrival, movement quality, and clean return of control to the player.
 
-| Deliverable | Status |
+<details>
+<summary>Replay and measurements · pending</summary>
+
+The recording will appear here after the first playtest, alongside the hardware used, frame-time measurements, and observed failures.
+
+</details>
+
+## Progress
+
+| Work | Current stage |
 | :--- | :--- |
-| Client build | Pending |
-| Waypoint replay | Pending playtest |
-| Frame time and memory | Pending benchmarks |
+| Fabric client | Planned |
+| First waypoint test | Planned |
+| Gameplay recordings | Planned |
 | Optional Colab training | Planned |
+
+---
+
+<sub>Minecraft Java 26.3 target · Builds planned through GitHub Actions</sub>
