@@ -14,7 +14,7 @@ import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
+import net.fabricmc.fabric.api.client.command.v2.ClientCommands;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
@@ -121,9 +121,9 @@ public class HumanAgentClient implements ClientModInitializer {
 
     private void registerCommands() {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
-            dispatcher.register(ClientCommandManager.literal("agent")
-                    .then(ClientCommandManager.literal("mode")
-                            .then(ClientCommandManager.argument("modeName", StringArgumentType.word())
+            dispatcher.register(ClientCommands.literal("agent")
+                    .then(ClientCommands.literal("mode")
+                            .then(ClientCommands.argument("modeName", StringArgumentType.word())
                                     .executes(ctx -> {
                                         String m = StringArgumentType.getString(ctx, "modeName").toUpperCase();
                                         try {
@@ -135,8 +135,8 @@ public class HumanAgentClient implements ClientModInitializer {
                                         }
                                         return 1;
                                     })))
-                    .then(ClientCommandManager.literal("bridge")
-                            .then(ClientCommandManager.argument("style", StringArgumentType.word())
+                    .then(ClientCommands.literal("bridge")
+                            .then(ClientCommands.argument("style", StringArgumentType.word())
                                     .executes(ctx -> {
                                         String s = StringArgumentType.getString(ctx, "style").toUpperCase();
                                         try {
@@ -148,10 +148,10 @@ public class HumanAgentClient implements ClientModInitializer {
                                         }
                                         return 1;
                                     })))
-                    .then(ClientCommandManager.literal("goto")
-                            .then(ClientCommandManager.argument("x", IntegerArgumentType.integer())
-                                    .then(ClientCommandManager.argument("y", IntegerArgumentType.integer())
-                                            .then(ClientCommandManager.argument("z", IntegerArgumentType.integer())
+                    .then(ClientCommands.literal("goto")
+                            .then(ClientCommands.argument("x", IntegerArgumentType.integer())
+                                    .then(ClientCommands.argument("y", IntegerArgumentType.integer())
+                                            .then(ClientCommands.argument("z", IntegerArgumentType.integer())
                                                     .executes(ctx -> {
                                                         int x = IntegerArgumentType.getInteger(ctx, "x");
                                                         int y = IntegerArgumentType.getInteger(ctx, "y");
@@ -161,13 +161,13 @@ public class HumanAgentClient implements ClientModInitializer {
                                                         sendStatus(mc, "Curved spline pathfinding to (" + x + ", " + y + ", " + z + ")");
                                                         return 1;
                                                     })))))
-                    .then(ClientCommandManager.literal("reloadweights")
+                    .then(ClientCommands.literal("reloadweights")
                             .executes(ctx -> {
                                 mlp.reloadWeights();
                                 sendStatus(Minecraft.getInstance(), "Reloaded neural weights from human_weights.json");
                                 return 1;
                             }))
-                    .then(ClientCommandManager.literal("stop")
+                    .then(ClientCommands.literal("stop")
                             .executes(ctx -> {
                                 AgentConfig.get().mode = AgentConfig.OperatingMode.IDLE;
                                 navigator.stop(Minecraft.getInstance());
@@ -180,7 +180,7 @@ public class HumanAgentClient implements ClientModInitializer {
 
     private static void sendStatus(Minecraft mc, String msg) {
         if (mc.player != null) {
-            mc.player.displayClientMessage(Component.literal("[HumanAgent] " + msg), true);
+            mc.gui.setOverlayMessage(Component.literal("[HumanAgent] " + msg), false);
         }
     }
 }

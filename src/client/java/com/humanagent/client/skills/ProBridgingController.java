@@ -9,6 +9,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -134,7 +135,7 @@ public final class ProBridgingController {
 
         if (rightClickCooldownTicks <= 0 && mc.player != null && mc.gameMode != null) {
             mc.gameMode.useItemOn(mc.player, InteractionHand.MAIN_HAND, bhr);
-            mc.player.swing(InteractionHand.MAIN_HAND);
+            mc.player.swing(InteractionHand.MAIN_HAND, SwingAnimation.DEFAULT, true);
             // Gaussian right-click interval (~13-15 CPS during placement window)
             rightClickCooldownTicks = aimProcessor.sampleGaussianClickDelayTicks(14.0, 1.5);
         }

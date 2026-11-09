@@ -14,7 +14,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.AxeItem;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
@@ -124,14 +125,14 @@ public final class CombatController {
             Entity hitEntity = ((EntityHitResult) mc.hitResult).getEntity();
             if (hitEntity == target && mc.gameMode != null) {
                 mc.gameMode.attack(player, target);
-                player.swing(InteractionHand.MAIN_HAND);
+                player.swing(InteractionHand.MAIN_HAND, SwingAnimation.DEFAULT, true);
                 if (cfg.enableWTap && player.isSprinting()) {
                     wTapReleaseTicks = 1 + random.nextInt(2); // 1-2 tick W-tap sprint reset
                 }
             }
         } else if (distSq <= 10.5) {
             // Natural air-swing when tracking fast-strafing opponents in 1.8 PvP
-            player.swing(InteractionHand.MAIN_HAND);
+            player.swing(InteractionHand.MAIN_HAND, SwingAnimation.DEFAULT, true);
         }
         attackClickTimer = aimProcessor.sampleGaussianClickDelayTicks(cfg.baseCps18, cfg.cpsStdDev18);
     }
@@ -150,7 +151,7 @@ public final class CombatController {
             Entity hitEntity = ((EntityHitResult) mc.hitResult).getEntity();
             if (hitEntity == target) {
                 mc.gameMode.attack(player, target);
-                player.swing(InteractionHand.MAIN_HAND);
+                player.swing(InteractionHand.MAIN_HAND, SwingAnimation.DEFAULT, true);
                 attackClickTimer = 2 + random.nextInt(2);
             }
         }
@@ -158,7 +159,7 @@ public final class CombatController {
 
     private void equipHotbarAxe(LocalPlayer player) {
         for (int i = 0; i < 9; i++) {
-            if (player.getInventory().getItem(i).getItem() instanceof AxeItem) {
+            if (player.getInventory().getItem(i).is(ItemTags.AXES)) {
                 player.getInventory().setSelectedSlot(i);
                 return;
             }

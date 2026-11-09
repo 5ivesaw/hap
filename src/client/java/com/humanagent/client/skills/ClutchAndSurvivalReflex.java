@@ -6,6 +6,7 @@ import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -51,7 +52,7 @@ public final class ClutchAndSurvivalReflex {
                 double distToGround = player.getY() - (groundHit.getY() + 1.0);
                 double ticksToImpact = distToGround / Math.abs(player.getDeltaMovement().y);
                 if (ticksToImpact <= 4.2) {
-                    if (equipWaterBucketOrFallBlock(player, level.dimensionType().ultraWarm())) {
+                    if (equipWaterBucketOrFallBlock(player, level.dimension() == Level.NETHER)) {
                         Vec3 aimPt = new Vec3(player.getX(), groundHit.getY() + 1.0, player.getZ());
                         aimProcessor.smoothLookAt(mc, aimPt, 12.0f);
                         if (ticksToImpact <= 2.1 && clutchCooldown == 0) {
@@ -88,7 +89,7 @@ public final class ClutchAndSurvivalReflex {
                         if (aimProcessor.smoothLookAt(mc, faceCenter, 10.0f) && clutchCooldown == 0 && mc. gameMode != null) {
                             BlockHitResult bhr = new BlockHitResult(faceCenter, placeFace, wallPos, false);
                             mc.gameMode.useItemOn(player, InteractionHand.MAIN_HAND, bhr);
-                            player.swing(InteractionHand.MAIN_HAND);
+                            player.swing(InteractionHand.MAIN_HAND, SwingAnimation.DEFAULT, true);
                             clutchCooldown = 3;
                         }
                         return true;

@@ -13,6 +13,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
@@ -173,7 +174,7 @@ public final class TaskCommander {
             gatherNearestBlock(mc, player, level, 32, state -> state.is(BlockTags.IRON_ORES));
         } else {
             currentTaskStatus = "Survival Stage 4: Searching for Diamonds / Nether Prep";
-            gatherNearestBlock(mc, player, level, 36, state -> state.is(BlockTags.DIAMOND_ORES) || state.is(Blocks.OBSIDIAN));
+            gatherNearestBlock(mc, player, level, 36, state -> state.is(Blocks.DIAMOND_ORE) || state.is(Blocks.DEEPSLATE_DIAMOND_ORE) || state.is(Blocks.OBSIDIAN));
         }
     }
 
@@ -208,7 +209,7 @@ public final class TaskCommander {
         if (onTarget && mc.hitResult != null && mc.hitResult.getType() == HitResult.Type.BLOCK) {
             BlockHitResult bhr = (BlockHitResult) mc.hitResult;
             mc.gameMode.continueDestroyBlock(bhr.getBlockPos(), bhr.getDirection());
-            player.swing(InteractionHand.MAIN_HAND);
+            player.swing(InteractionHand.MAIN_HAND, SwingAnimation.DEFAULT, true);
             mc.options.keyAttack.setDown(true);
         } else {
             mc.options.keyAttack.setDown(false);
