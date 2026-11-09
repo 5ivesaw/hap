@@ -1,9 +1,10 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-    <img src="assets/hero.svg" width="880" alt="HAHA. Human-Agent Humanisation and Autonomy. A laughing voxel face with pixel tears.">
-  </picture>
+  <img src="assets/laugh-cube.svg" width="240" height="163" alt="Laugh Cube, the HAHA mascot, laughing with animated pixel tears">
 </p>
+
+<h1 align="center">HAHA</h1>
+
+<p align="center">Human-Agent Humanisation and Autonomy</p>
 
 <p align="center"><strong>A Minecraft agent that plays on its own and moves like a skilled player.</strong></p>
 
