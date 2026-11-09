@@ -56,8 +56,7 @@ public final class GameplayDataLogger {
             writer = Files.newBufferedWriter(csvPath, StandardCharsets.UTF_8,
                     StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             if (writeHeader) {
-                writer.write("delta_yaw,delta_pitch,angular_dist,prev_step_yaw,prev_step_pitch,target_ang_vel,actual_step_yaw,actual_step_pitch,enemy_dist,enemy_rel_angle,target_hurt,my_hurt,key_w,key_a,key_s,key_d,key_jump,key_sprint
-");
+                writer.write("delta_yaw,delta_pitch,angular_dist,prev_step_yaw,prev_step_pitch,target_ang_vel,actual_step_yaw,actual_step_pitch,enemy_dist,enemy_rel_angle,target_hurt,my_hurt,key_w,key_a,key_s,key_d,key_jump,key_sprint\n");
             }
             if (mc.player != null) {
                 prevYaw = mc.player.getYRot();
