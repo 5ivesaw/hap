@@ -8,9 +8,9 @@
 <p align="center"><strong>A Minecraft agent that plays on its own and moves like a skilled player.</strong></p>
 
 <p align="center">
-  <a href="#the-vision">✦ Vision</a> &nbsp; · &nbsp;
-  <a href="#first-playtest">▶ Playtest</a> &nbsp; · &nbsp;
-  <a href="#whats-next">▦ What’s next</a>
+  <a href="#the-vision">Vision</a> &nbsp; · &nbsp;
+  <a href="#first-playtest">Playtest</a> &nbsp; · &nbsp;
+  <a href="#whats-next">What’s next</a>
 </p>
 
 ## The vision
@@ -32,5 +32,5 @@
 
 | | |
 | :--- | :--- |
-| **📦 First build** · Pending | **⏱ Benchmarks** · Frame time and memory pending |
-| **🎬 Replay** · Awaiting first playtest | **🧪 Training** · Optional Colab workflow planned |
+| **First build** · Pending | **Benchmarks** · Frame time and memory pending |
+| **Replay** · Awaiting first playtest | **Training** · Optional Colab workflow planned |
