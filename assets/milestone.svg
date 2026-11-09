@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 235" role="img" aria-labelledby="title">
+<title id="title">Demo slot 01 — First Waypoint</title>
+<defs><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#59768a" opacity=".42"/></pattern></defs>
+<rect x="1" y="1" width="1118" height="233" rx="21" fill="#101b2b" stroke="#40566d"/>
+<rect x="635" y="19" width="465" height="197" rx="13" fill="url(#dots)" stroke="#40566d" stroke-dasharray="5 5"/>
+<g font-family="monospace" font-size="15" letter-spacing="2">
+<text x="46" y="58" fill="#8bf6c4">FIELD TEST / 01</text>
+<text x="46" y="182" fill="#a9bdce">MOVE  ·  ARRIVE  ·  HAND BACK CONTROL</text>
+<text x="868" y="179" text-anchor="middle" fill="#a9bdce">REPLAY SLOT</text>
+</g>
+<text x="44" y="130" fill="#f1f7ff" font-family="system-ui,sans-serif" font-size="49" font-weight="750">First Waypoint</text>
+<circle cx="868" cy="102" r="35" fill="#192d3c" stroke="#79e4ba" stroke-width="2"/>
+<path d="M860 87l21 15-21 15z" fill="#8bf6c4"/>
+</svg>
