@@ -180,7 +180,7 @@ public class HumanAgentClient implements ClientModInitializer {
 
     private static void sendStatus(Minecraft mc, String msg) {
         if (mc.player != null) {
-            mc.gui.setOverlayMessage(Component.literal("[HumanAgent] " + msg), false);
+            mc.gui.hud.setOverlayMessage(Component.literal("[HumanAgent] " + msg), false);
         }
     }
 }
