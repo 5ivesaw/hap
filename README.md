@@ -1,36 +1,7 @@
-<img src="assets/hap.svg" width="960" alt="Hap. A Minecraft agent in development, with an ink and paper wordmark and a block-shaped smiling mascot.">
+# Hap
 
-[The project](#the-project) &nbsp; / &nbsp; [First test](#first-test) &nbsp; / &nbsp; [Progress](#progress)
+An autonomous Minecraft agent designed to navigate, gather resources, build, fight, and complete longer goals with humanlike movement and timing.
 
-## The project
+The target is a lightweight Fabric client for Minecraft Java 26.3, suitable for an i5-6200U laptop with Intel HD 520 graphics and 8 GB RAM. Builds will run through GitHub Actions, with optional model training in Google Colab.
 
-Hap explores how an autonomous Minecraft player should move, aim, build, and make decisions. The ambition is a capable agent whose actions feel deliberate, with a small enough client to run on modest hardware.
-
-**Movement** — Camera control, footwork, tool changes, and placement timing.  
-**Planning** — Gathering resources, choosing tasks, and following longer goals.
-
-## First test
-
-**01 / Reach a waypoint**
-
-A controlled world, one marked destination, and a recorded run. The first test will measure arrival, movement quality, and clean return of control to the player.
-
-<details>
-<summary>Replay and measurements · pending</summary>
-
-The recording will appear here after the first playtest, alongside the hardware used, frame-time measurements, and observed failures.
-
-</details>
-
-## Progress
-
-| Work | Current stage |
-| :--- | :--- |
-| Fabric client | Planned |
-| First waypoint test | Planned |
-| Gameplay recordings | Planned |
-| Optional Colab training | Planned |
-
----
-
-<sub>Minecraft Java 26.3 target · Builds planned through GitHub Actions</sub>
+Development is restarting from the original project vision. Implementation and gameplay validation are pending.
