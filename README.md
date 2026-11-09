@@ -1,37 +1,42 @@
-<p align="center">
-  <img src="assets/laugh-cube.svg" width="240" height="163" alt="Laugh Cube, the HAHA mascot, laughing with animated pixel tears">
-</p>
-
-<h1 align="center">HAHA</h1>
-
-<p align="center">Human-Agent Humanisation and Autonomy</p>
-
-<p align="center"><strong>A Minecraft agent that plays on its own and moves like a skilled player.</strong></p>
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+    <img src="assets/hero.svg" width="880" alt="Hap — Autonomous Minecraft, humanlike control. The Hap mascot laughs with animated pixel tears.">
+  </picture>
+</h1>
 
 <p align="center">
-  <a href="#the-vision">Vision</a> &nbsp; · &nbsp;
-  <a href="#first-playtest">Playtest</a> &nbsp; · &nbsp;
-  <a href="#whats-next">What’s next</a>
+  <a href="#design"><img src="assets/compass.svg" width="19" height="19" alt=""> Design</a>
+  &emsp;
+  <a href="#first-playtest"><img src="assets/play.svg" width="19" height="19" alt=""> Playtest</a>
+  &emsp;
+  <a href="#development-status"><img src="assets/status.svg" width="19" height="19" alt=""> Status</a>
 </p>
 
-## The vision
+## Design
+
+Hap is a planned Fabric client for Minecraft Java 26.3. Its goal is to combine precise movement with independent task planning in a lightweight client.
 
 <p align="center">
-  <img src="assets/move.svg" width="410" alt="01 Move like a player. Smooth aim, deliberate inputs, and steady footing.">
-  <img src="assets/plan.svg" width="410" alt="02 Plan the next move. Chain small skills into longer goals.">
+  <img src="assets/move.svg" width="410" alt="Movement control: camera, timing, and footwork.">
+  <img src="assets/plan.svg" width="410" alt="Task planning: actions, sequences, and goals.">
 </p>
-
-<p align="center"><sub>Target: Minecraft Java 26.3 · Fabric · Lightweight client</sub></p>
 
 ## First playtest
 
 <p align="center">
-  <img src="assets/milestone.svg" width="880" alt="First Waypoint. Replay coming later. Take control, reach a marked waypoint, then hand back control.">
+  <img src="assets/milestone.svg" width="880" alt="First Waypoint. Replay pending. Take control, reach the marker, then return control.">
 </p>
 
-## What’s next
+## Development status
 
-| | |
+| Deliverable | Status |
 | :--- | :--- |
-| **First build** · Pending | **Benchmarks** · Frame time and memory pending |
-| **Replay** · Awaiting first playtest | **Training** · Optional Colab workflow planned |
+| Client build | Pending |
+| Waypoint replay | Pending playtest |
+| Frame time and memory | Pending benchmarks |
+| Optional Colab training | Planned |
+
+<p align="center">
+  <img src="assets/hap-mascot.svg" width="92" alt="Hap, the project mascot">
+</p>
