@@ -1,8 +1,5 @@
 <h1 align="center">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-    <img src="assets/hero.svg" width="880" alt="Hap — Autonomous Minecraft, humanlike control. The Hap mascot laughs with animated pixel tears.">
-  </picture>
+  <img src="assets/hap.svg" width="800" alt="Hap. A laughing voxel explorer with a gold helmet and a teal visor.">
 </h1>
 
 <p align="center">
@@ -36,7 +33,3 @@ Hap is a planned Fabric client for Minecraft Java 26.3. Its goal is to combine p
 | Waypoint replay | Pending playtest |
 | Frame time and memory | Pending benchmarks |
 | Optional Colab training | Planned |
-
-<p align="center">
-  <img src="assets/hap-mascot.svg" width="92" alt="Hap, the project mascot">
-</p>
