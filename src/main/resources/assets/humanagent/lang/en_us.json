@@ -1,6 +1,0 @@
-{
-  "key.category.humanagent.main": "HumanAgent Autonomous Bot",
-  "key.humanagent.toggle_agent": "Toggle Autonomous Agent",
-  "key.humanagent.toggle_bridge": "Toggle Pro Bridging (Speedbridge / Moonwalk)",
-  "key.humanagent.toggle_record": "Toggle Gameplay Data Recorder (Colab CSV)"
-}
