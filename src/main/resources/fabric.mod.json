@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "humanagent",
+  "version": "${version}",
+  "name": "HumanAgent Autonomous Player",
+  "description": "Experimental Minecraft 26.3 client agent exploring navigation, aiming, bridging, combat, and gameplay recording.",
+  "authors": [
+    "HumanAgentProject"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.humanagent.HumanAgentMod"
+    ],
+    "client": [
+      "com.humanagent.client.HumanAgentClient"
+    ]
+  },
+  "mixins": [
+    "humanagent.mixins.json",
+    {
+      "config": "humanagent.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "viafabricplus": "*",
+    "baritone": "*"
+  }
+}

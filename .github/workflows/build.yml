@@ -1,0 +1,50 @@
+name: Build HumanAgent 26.3 Jar
+
+on:
+  push:
+    branches: [ "main", "master" ]
+    tags: [ "v*" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 25 (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '25'
+
+      - name: Set up Gradle 9.6.0 & Build Mod Jar
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.6.0'
+
+      - name: Compile Fabric 26.3 Mod
+        run: gradle build --no-daemon
+
+      - name: Upload Compiled Mod Jar Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: human-agent-26.3-jar
+          path: |
+            build/libs/*.jar
+            !build/libs/*-sources.jar
+            !build/libs/*-dev.jar
+
+      - name: Create GitHub Release (on Tag Push)
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          MAIN_JAR=$(ls build/libs/*.jar | grep -vE '(-sources|-dev)\.jar$' | head -n 1)
+          gh release create "${GITHUB_REF_NAME}" "$MAIN_JAR" --generate-notes --title "HumanAgent ${GITHUB_REF_NAME}"
