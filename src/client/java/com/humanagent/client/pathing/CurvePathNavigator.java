@@ -16,7 +16,7 @@ import java.util.*;
 
 /**
  * Layer 2 Navigator:
- * 1. Computes a 3D path using asynchronous A* (or delegates to Baritone API if loaded).
+ * 1. Computes a bounded 3D path on the client tick (or reads a Baritone path if loaded).
  * 2. Runs a Theta* Any-Angle Line-of-Sight pass to remove unnecessary 45/90-degree staircase nodes.
  * 3. Interpolates remaining waypoints with a Centripetal Catmull-Rom Spline so the bot walks in smooth, human curves.
  * 4. Drives movement exclusively via client KeyMappings (W, A, S, D, Space, Sprint).
@@ -186,7 +186,7 @@ public final class CurvePathNavigator {
                 }
             }
         } catch (Throwable ignored) {
-            // Baritone not installed; built-in A* handles navigation seamlessly
+            // Fall back to the bounded local path search.
         }
         return null;
     }

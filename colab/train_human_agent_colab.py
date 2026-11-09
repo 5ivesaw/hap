@@ -3,7 +3,7 @@
 # ==============================================================================
 # How to use in Google Colab:
 # 1. Open https://colab.research.google.com/ and create a New Notebook.
-# 2. Change Runtime -> Change runtime type -> T4 GPU (uses almost 0 compute units!).
+# 2. Optionally change Runtime -> Change runtime type -> T4 GPU. GPU usage consumes compute units.
 # 3. Optional: Upload your `.minecraft/config/recorded_gameplay.csv` to the Colab Files sidebar.
 # 4. Paste this entire script into a cell and click Run!
 # 5. It will train both neural networks on the GPU and download `human_weights.json`.

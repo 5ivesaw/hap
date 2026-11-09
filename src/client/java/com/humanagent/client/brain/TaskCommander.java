@@ -31,7 +31,8 @@ import java.util.List;
 
 /**
  * Layer 1 Autonomous Strategy Brain (Commander):
- * Evaluates real inventory, health, threats, and world state every tick without any fake stubs or pretend goals.
+ * Selects simple tasks from observed inventory and nearby world state.
+ * Goal completion and full autonomy still require gameplay validation.
  */
 public final class TaskCommander {
     private final HumanAimProcessor aimProcessor;

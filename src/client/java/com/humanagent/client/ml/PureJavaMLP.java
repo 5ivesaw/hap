@@ -15,8 +15,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 /**
- * Zero-dependency, ultra-low-latency Multi-Layer Perceptron inference engine for Intel i5-6200U.
- * Runs a 3-layer forward pass in < 0.008 milliseconds with zero heap allocations during tick execution.
+ * Small Java Multi-Layer Perceptron inference engine.
+ * Performance has not been benchmarked on the target laptop.
  */
 public final class PureJavaMLP {
     public static final class NetworkWeights {
@@ -32,7 +32,7 @@ public final class PureJavaMLP {
         public final float[] w3;
         public final float[] b3;
 
-        // Pre-allocated scratch buffers so forward() creates zero garbage collection pressure
+        // Reuse scratch buffers during each forward pass.
         private final float[] bufH1;
         private final float[] bufH2;
         private final float[] bufOut;

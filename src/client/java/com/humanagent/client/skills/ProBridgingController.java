@@ -22,7 +22,7 @@ import java.util.Random;
 /**
  * Layer 3A Pro Bridging Controller:
  * Supports Speedbridging (Ninja / Eagle) and Moonwalking with the 1-Tick Physics Lookahead "Edge Guard"
- * so humanized aim wobble never results in falling into the void.
+ * The edge prediction is experimental and does not guarantee fall prevention.
  */
 public final class ProBridgingController {
     private final HumanAimProcessor aimProcessor;
